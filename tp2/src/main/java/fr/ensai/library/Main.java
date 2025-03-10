@@ -17,6 +17,10 @@ public class Main {
         Library library = new Library("ENSAI Library");
         library.loadBooksFromCSV("books.csv");
         library.addItem(fellowshipOfTheRing);
+        Magazine magazine1 = new Magazine("1774-7201", "Closer", "1030", 2025, 50);
+        Magazine magazine2 = new Magazine("0397-1635", "Paris-Match", "892", 2021, 83);
+        library.addItem(magazine1);
+        library.addItem(magazine2);
         library.displayItems();
     }
 
