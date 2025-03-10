@@ -14,5 +14,11 @@ public class Main {
                 423);
 
         System.out.println(fellowshipOfTheRing.toString());
+        Library library = new Library("ENSAI Library");
+        library.loadBooksFromCSV("books.csv");
+        library.addItem(fellowshipOfTheRing);
+        library.displayItems();
     }
+
+    
 }

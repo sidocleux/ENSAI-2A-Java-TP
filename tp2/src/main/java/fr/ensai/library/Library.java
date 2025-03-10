@@ -3,6 +3,7 @@ package fr.ensai.library;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,27 +11,27 @@ import java.util.Map;
 
 public class Library {
     private String name;
-    private List<Book> books;
+    private List<Item> items;
 
     // Constructeur
     public Library(String name) {
         this.name = name;
-        this.books = new ArrayList<>();
+        this.items = new ArrayList<>();
     }
 
     // Ajouter un livre à la collection
-    public void addBook(Book book) {
-        books.add(book);
+    public void addItem(Item item) {
+        this.items.add(item);
     }
 
     // Afficher tous les livres de la bibliothèque
-    public void displayBooks() {
-        if (books.isEmpty()) {
+    public void displayItems() {
+        if (items.isEmpty()) {
             System.out.println("La bibliothèque " + name + " ne contient aucun livre.");
         } else {
             System.out.println("Livres disponibles dans la bibliothèque " + name + " :");
-            for (Book book : books) {
-                System.out.println(book); // Appelle automatiquement book.toString()
+            for (Item item : items) {
+                System.out.println(item); // Appelle automatiquement book.toString()
             }
         }
     }
@@ -69,7 +70,7 @@ public class Library {
                     }
                     Book book = new Book(isbn, title, author, year, pageCount);
 
-                    this.addIem(book);
+                    this.addItem(book);
                 }
             }
         } catch (
